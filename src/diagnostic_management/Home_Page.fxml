@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="883.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagnostic_management.Home_PageController">
+   <children>
+      <VBox prefHeight="551.0" prefWidth="203.0" style="-fx-background-color: #342987;">
+         <children>
+            <ComboBox fx:id="User" prefHeight="50.0" prefWidth="206.0" promptText="User Panel" />
+            <ComboBox fx:id="Rec" prefHeight="50.0" prefWidth="206.0" promptText="Reception &amp; Hosting" />
+            <ComboBox fx:id="Lab" prefHeight="50.0" prefWidth="206.0" promptText="Lab Section " />
+            <ComboBox fx:id="Admini" prefHeight="50.0" prefWidth="206.0" promptText="Administration" />
+            <Button mnemonicParsing="false" onAction="#Add_patient" prefHeight="55.0" prefWidth="205.0" text="ADD PATIENT" />
+         </children>
+      </VBox>
+      <AnchorPane fx:id="parentpane" layoutX="203.0" prefHeight="558.0" prefWidth="688.0" />
+   </children>
+</AnchorPane>
