@@ -19,9 +19,7 @@ public class Database_Connection {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             String connectionUrl = "jdbc:sqlserver://localhost:1433;user=sa;password=p@ssword13;" + "databaseName=DG_center;";
-//            String dbURL =  "jdbc:sqlserver://localhost::1433";
-//            String dbuser = "sa";
-//            String dbPass = "p@ssword13";
+
             con = DriverManager.getConnection(connectionUrl);
 
             System.out.println("Connected");

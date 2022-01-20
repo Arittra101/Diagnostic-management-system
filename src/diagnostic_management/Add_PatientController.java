@@ -35,10 +35,10 @@ public class Add_PatientController implements Initializable {
 
     @FXML
     TableView<Table_Patient> table;
-    
+
     @FXML
     private TableColumn<Table_Patient, String> T_age;
-    
+
     @FXML
     private TableColumn<Table_Patient, String> T_gender;
 
@@ -47,8 +47,6 @@ public class Add_PatientController implements Initializable {
 
     @FXML
     private TableColumn<Table_Patient, String> T_phone;
-    
- 
 
     @FXML
     private TextField name;
@@ -83,13 +81,12 @@ public class Add_PatientController implements Initializable {
         String p_phn = phn.getText();
         String gnd = gender.getValue();
 
-
         String insert_query = "insert into DG_user values('" + Pname + "','" + P_age + "','" + p_phn + "','" + gnd + "')";
         Statement st = conn.createStatement();
         st.executeUpdate(insert_query);
-            
-         patient_info.clear();
-        fetch_info();
+
+        refresh();
+
     }
 
     public void fetch_info() {
@@ -118,12 +115,29 @@ public class Add_PatientController implements Initializable {
         }
 
     }
-    
+
+    void refresh() {
+        patient_info.clear();
+        fetch_info();
+    }
+
     @FXML
-    void Refresh(ActionEvent event) {
-        
-           patient_info.clear();
-            fetch_info();
+    void Delete(ActionEvent event) throws SQLException {
+
+        try {
+            ObservableList<Table_Patient> delete_List;
+            delete_List = table.getSelectionModel().getSelectedItems();
+
+            String name = delete_List.get(0).getName();
+            String delete_query = "Delete from DG_user where name='" + name + "'";
+            Statement st = conn.createStatement();
+            st.executeUpdate(delete_query);
+            refresh();
+           
+        } catch (Exception e) {
+                System.out.println(e);
+        }
+
     }
 
 }
