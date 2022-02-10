@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="drPane" prefHeight="558.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagnostic_management.Add_DrController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="38.0" prefWidth="695.0" style="-fx-background-color: #342987;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD DOCTOR" textAlignment="RIGHT">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <TextField fx:id="Dr_name" layoutX="154.0" layoutY="60.0" />
+      <TextField fx:id="Dr_phnNum" layoutX="155.0" layoutY="110.0" />
+      <TextField fx:id="Dr_visitHour" layoutX="155.0" layoutY="162.0" />
+      <Text layoutX="45.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr.Name" />
+      <Text layoutX="43.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" />
+      <Text layoutX="43.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visiting Hour" />
+      <Text layoutX="45.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Specialist" />
+      <ComboBox fx:id="Dr_special" layoutX="155.0" layoutY="212.0" prefWidth="150.0" />
+      <TextField fx:id="Dr_room" layoutX="486.0" layoutY="60.0" />
+      <Text layoutX="385.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Number" />
+      <TextField fx:id="Dr_visitFee" layoutX="486.0" layoutY="110.0" />
+      <Text layoutX="382.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visiting Fee" />
+      <Text layoutX="382.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" wrappingWidth="32.49609375" />
+      <ComboBox fx:id="Dr_status" layoutX="487.0" layoutY="212.0" prefWidth="150.0" />
+      <Text layoutX="382.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fee type" />
+      <Button fx:id="Dr_Insert" layoutX="501.0" layoutY="257.0" mnemonicParsing="false" onAction="#Add" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: #342987;" text="Add" textFill="WHITE" />
+      <Button fx:id="Dr_Back" layoutX="577.0" layoutY="257.0" mnemonicParsing="false" onAction="#Back" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: #342987;" text="Back" textFill="WHITE" />
+      <TableView fx:id="Dr_Table" layoutX="6.0" layoutY="297.0" prefHeight="212.0" prefWidth="689.0">
+        <columns>
+          <TableColumn fx:id="T_Did" prefWidth="62.0" text="D_id" />
+          <TableColumn fx:id="T_Dname" prefWidth="74.0" text="Name" />
+            <TableColumn fx:id="T_Dphone" prefWidth="75.0" text="Phone" />
+            <TableColumn fx:id="T_Ds" prefWidth="82.0" text="Specialist" />
+            <TableColumn fx:id="T_Dvh" prefWidth="95.0" text="Visiting Hour" />
+            <TableColumn fx:id="T_Dvf" prefWidth="81.0" text="Visiting Fee" />
+            <TableColumn fx:id="T_Drn" prefWidth="74.0" text="Room No." />
+            <TableColumn fx:id="T_Dst" prefWidth="60.0" text="Status" />
+            <TableColumn fx:id="T_Dpass" prefWidth="88.0" text="Password" />
+        </columns>
+      </TableView>
+      <Button fx:id="Dr_InfroDelete" layoutX="635.0" layoutY="519.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-color: #342987;" text="Delete" textFill="WHITE" />
+      <ComboBox fx:id="Dr_feeTy" layoutX="487.0" layoutY="162.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
