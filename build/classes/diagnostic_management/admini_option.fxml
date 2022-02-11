@@ -19,16 +19,16 @@
             </Text>
          </children>
       </VBox>
-      <ImageView fitHeight="450.0" fitWidth="703.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="450.0" fitWidth="703.0" layoutY="91.0" pickOnBounds="true">
          <image>
             <Image url="@../image/admini.jpg" />
          </image>
       </ImageView>
       <AnchorPane fx:id="Admini_pane" layoutY="90.0" prefHeight="459.0" prefWidth="703.0">
          <children>
-            <Button layoutX="303.0" layoutY="145.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="121.0" text="Add Receptionist" />
+            <Button layoutX="303.0" layoutY="145.0" mnemonicParsing="false" onAction="#addReceptionist" prefHeight="44.0" prefWidth="121.0" text="Add Receptionist" />
             <Button layoutX="128.0" layoutY="145.0" mnemonicParsing="false" onAction="#add_Doctor" prefHeight="44.0" prefWidth="121.0" text="Add Doctor" />
-            <Button fx:id="addEmployee" layoutX="465.0" layoutY="145.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="121.0" text="Add Pathelogy" />
+            <Button fx:id="addEmployee" layoutX="465.0" layoutY="145.0" mnemonicParsing="false" onAction="#add_pathologist" prefHeight="44.0" prefWidth="121.0" text="Add Pathelogy" />
             <Button fx:id="pathList" layoutX="465.0" layoutY="240.0" mnemonicParsing="false" onAction="#add_Doctor" prefHeight="44.0" prefWidth="121.0" text=" Pathelogy List" />
             <Button fx:id="recepList" layoutX="303.0" layoutY="232.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="121.0" text="Receptionist List" />
             <Button fx:id="doctorList" layoutX="134.0" layoutY="232.0" mnemonicParsing="false" onAction="#add_Doctor" prefHeight="44.0" prefWidth="121.0" text="Doctor List" />

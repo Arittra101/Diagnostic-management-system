@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="recptionist_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagnostic_management.Add_RecptionistController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="42.0" prefWidth="678.0" style="-fx-background-color: #342987;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD RECEPTIONIST">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <TextField fx:id="name" layoutX="237.0" layoutY="104.0" prefHeight="28.0" prefWidth="174.0" />
+      <TextField fx:id="phone" layoutX="238.0" layoutY="249.0" prefHeight="28.0" prefWidth="174.0" />
+      <TextField fx:id="password" layoutX="237.0" layoutY="374.0" prefHeight="25.0" prefWidth="174.0" />
+      <Text layoutX="157.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text layoutX="159.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender" />
+      <Text layoutX="159.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone" />
+      <Text layoutX="159.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Join Date" />
+      <Text layoutX="157.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <ComboBox fx:id="gender" layoutX="237.0" layoutY="180.0" prefHeight="28.0" prefWidth="174.0" />
+      <Button layoutX="339.0" layoutY="428.0" mnemonicParsing="false" onAction="#add_button_Action" prefHeight="28.0" prefWidth="50.0" text="Add" />
+      <Button layoutX="277.0" layoutY="427.0" mnemonicParsing="false" onAction="#back_button_Action" prefHeight="28.0" prefWidth="49.0" text="Back" />
+      <DatePicker fx:id="joindate" layoutX="239.0" layoutY="306.0" />
+   </children>
+</AnchorPane>

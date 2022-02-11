@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
 /**
@@ -26,6 +27,14 @@ public class Admini_optionController implements Initializable {
     private AnchorPane adminiOptionPane;
     @FXML
     private AnchorPane Admini_pane;
+    @FXML
+    private Button addEmployee;
+    @FXML
+    private Button pathList;
+    @FXML
+    private Button recepList;
+    @FXML
+    private Button doctorList;
 
     /**
      * Initializes the controller class.
@@ -39,6 +48,18 @@ public class Admini_optionController implements Initializable {
     private void add_Doctor(ActionEvent event) throws IOException {
          Parent pane=FXMLLoader.load(getClass().getResource("Add_Dr.fxml"));
          adminiOptionPane.getChildren().setAll(pane);
+    }
+
+    @FXML
+    private void addReceptionist(ActionEvent event) throws IOException {
+           Parent pane=FXMLLoader.load(getClass().getResource("Add_Recep.fxml"));
+           adminiOptionPane.getChildren().setAll(pane);
+    }
+
+    @FXML
+    private void add_pathologist(ActionEvent event) throws IOException {
+        Parent pane=FXMLLoader.load(getClass().getResource("Add_Recptionistfxml"));
+           adminiOptionPane.getChildren().setAll(pane);
     }
     
 }
