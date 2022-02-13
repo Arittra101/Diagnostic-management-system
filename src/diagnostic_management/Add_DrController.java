@@ -104,7 +104,7 @@ public class Add_DrController implements Initializable {
 
     ObservableList<String> ComboactiveStatus = FXCollections.observableArrayList("Available", "Unavailable");
     ObservableList<String> CombofeeType = FXCollections.observableArrayList("Poor Fee", "Freedom Fighters Fee");
-    ObservableList<String> ComboSpecial = FXCollections.observableArrayList("Heart", "Kidneys");
+    ObservableList<String> ComboSpecial = FXCollections.observableArrayList("Radiologists", "Neurologists", "Hematologists", "Gastroenterologists", "Endocrinologists", "Dermatologists", "Cardiologists");
 
     ObservableList<Dr_info> Doctor_info = FXCollections.observableArrayList();
 
@@ -116,9 +116,12 @@ public class Add_DrController implements Initializable {
     String DvFee;
     String DvHour;
     String DfeeType;
-    String Dspecial;
+    String Dtype;
+    String Dpassword;
 
     String DStatus;
+    @FXML
+    private TextField password;
 
     /**
      * Initializes the controller class.
@@ -142,13 +145,14 @@ public class Add_DrController implements Initializable {
         DvFee = Dr_visitFee.getText().toString();
         DvHour = Dr_visitHour.getText().toString();
         DfeeType = Dr_feeTy.getValue().toString();
-        Dspecial = Dr_special.getValue().toString();
+        Dtype = Dr_special.getValue().toString();
         DStatus = Dr_status.getValue().toString();
+        Dpassword=password.getText().toString();
 
         try {
             Statement st = con.createStatement();
-            String add_doctorQuery = "insert into doctor values('" + Dname + "','" + DroomNumber + "','" + DpNumber
-                    + "','" + DvFee + "','" + DvHour + "','" + DfeeType + "','" + Dspecial + "','" + DStatus + "','" + "Not set" + "')";
+            String add_doctorQuery = "insert into doctor values('" + Dname + "','" + Dtype+ "','" + DroomNumber
+                    + "','" + DpNumber + "','" + DvFee + "','" + DvHour + "','" + DfeeType + "','" + DStatus + "','" + Dpassword + "')";
 
             st.execute(add_doctorQuery);
             refresh_and_fetch();
@@ -189,7 +193,7 @@ public class Add_DrController implements Initializable {
         T_Did.setCellValueFactory(new PropertyValueFactory("D_id"));
         T_Dname.setCellValueFactory(new PropertyValueFactory("D_Name"));
         T_Dphone.setCellValueFactory(new PropertyValueFactory("D_Phone"));
-        T_Ds.setCellValueFactory(new PropertyValueFactory("D_Special"));
+        T_Ds.setCellValueFactory(new PropertyValueFactory("D_Type"));
         T_Dvh.setCellValueFactory(new PropertyValueFactory("D_VH"));
         T_Dvf.setCellValueFactory(new PropertyValueFactory("D_vf"));
         T_Drn.setCellValueFactory(new PropertyValueFactory("D_Rnm"));
@@ -212,7 +216,7 @@ public class Add_DrController implements Initializable {
                 String d_visitingFee = rs.getString("d_visitingFee");
                 String d_visitHour = rs.getString("d_visitHour");
                 String d_discountType = rs.getString("d_discountType");
-                String d_special = rs.getString("d_special");
+                String d_special = rs.getString("D_Type");
                 String d_Status = rs.getString("d_Status");
                 String d_pass = rs.getString("d_pass");
 

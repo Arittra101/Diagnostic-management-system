@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="910.0" style="-fx-background-color: #a8cce0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagnostic_management.Home_PageController">
+<AnchorPane fx:id="adminPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="910.0" style="-fx-background-color: #a8cce0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagnostic_management.Home_PageController">
    <children>
       <VBox prefHeight="551.0" prefWidth="203.0" style="-fx-background-color: #33b4ff;">
          <children>
@@ -45,7 +45,7 @@
                   </Button>
                </children>
             </AnchorPane>
-            <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="207.0" style="-fx-background-color: #33b4ff;" text="Log Out" />
+            <Button mnemonicParsing="false" onAction="#logOut_Action" prefHeight="55.0" prefWidth="207.0" style="-fx-background-color: #33b4ff;" text="Log Out" />
          </children>
       </VBox>
       <AnchorPane fx:id="mainpane" layoutX="205.0" prefHeight="551.0" prefWidth="703.0" />

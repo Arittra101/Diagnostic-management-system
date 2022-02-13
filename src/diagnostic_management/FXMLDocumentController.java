@@ -8,6 +8,7 @@ package diagnostic_management;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
+import static java.sql.JDBCType.INTEGER;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -35,10 +36,15 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private TextField uid;
     
+  
+    
     Connection con;
     String U_id;
     String pword; 
     String db_password;
+    String fxml_name;
+    String query;
+    String Pass_column;
     @FXML
     private AnchorPane longinPane;
   
@@ -53,18 +59,38 @@ public class FXMLDocumentController implements Initializable {
     private void Signin_Button(ActionEvent event) throws SQLException, IOException {
         U_id=uid.getText().toString();
         pword=password.getText().toString();
-        
         Statement st= con.createStatement();
-        String query="Select A_Password from Admins where A_ID = "+U_id;
+        if( Integer.parseInt(U_id)>=100&& Integer.parseInt(U_id)<200)
+        {
+              query="Select A_Password from Admins where A_ID = "+U_id;
+              fxml_name="Home_Page.fxml";
+              Pass_column="A_Password";
+        } 
+        else if(Integer.parseInt(U_id)>=200&& Integer.parseInt(U_id)<300)
+        {
+          
+            query="Select R_Password from Receptionist where R_ID = "+U_id;
+            fxml_name="Recep_Home.fxml"; 
+            Pass_column="R_Password";
+        }
+        else if(Integer.parseInt(U_id)>=300&& Integer.parseInt(U_id)<400)
+        {
+            query="Select d_pass from doctor where d_ID = "+U_id;
+            fxml_name="Dr_Home.fxml"; 
+            Pass_column="d_pass";
+            ApointmentListController.loginDr=Integer.valueOf(U_id);
+            
+        }
+       
         ResultSet rs= st.executeQuery(query);
         while(rs.next())
         {
-               db_password=rs.getString("A_Password");
+               db_password=rs.getString(Pass_column);
                System.out.println("Password ="+db_password);
         }
-        if(db_password.endsWith(pword))
+        if(db_password.equals(pword))
         {
-            Parent pane =FXMLLoader.load(getClass().getResource("Home_Page.fxml"));
+            Parent pane =FXMLLoader.load(getClass().getResource(fxml_name));
             longinPane.getChildren().setAll(pane);
         }
         else

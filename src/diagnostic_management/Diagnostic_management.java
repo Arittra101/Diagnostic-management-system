@@ -21,7 +21,7 @@ public class Diagnostic_management extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         
-        Parent root = FXMLLoader.load(getClass().getResource("Home_Page.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("LogIN.fxml"));
         stage.initStyle(StageStyle.UNDECORATED);
         Scene scene = new Scene(root);
         stage.setScene(scene);

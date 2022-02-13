@@ -30,6 +30,8 @@ public class Home_PageController implements Initializable {
     private AnchorPane mainpane;
     @FXML
     private Button ad;
+    @FXML
+    private AnchorPane adminPane;
   
      
      /**
@@ -47,6 +49,12 @@ public class Home_PageController implements Initializable {
         Parent pane=FXMLLoader.load(getClass().getResource("admini_option.fxml"));
         mainpane.getChildren().setAll(pane);
              
+    }
+
+    @FXML
+    private void logOut_Action(ActionEvent event) throws IOException {
+        Parent pane=FXMLLoader.load(getClass().getResource("LogIN.fxml"));
+        adminPane.getChildren().setAll(pane);
     }
 
   
