@@ -21,7 +21,7 @@
             </Text>
          </children>
       </VBox>
-      <TableView fx:id="Dr_TableList" layoutX="2.0" layoutY="116.0" prefHeight="410.0" prefWidth="689.0">
+      <TableView fx:id="Patient_List" layoutX="2.0" layoutY="116.0" prefHeight="410.0" prefWidth="689.0">
          <columns>
             <TableColumn fx:id="T_pid" prefWidth="68.0" text="P_ID" />
             <TableColumn fx:id="T_PName" prefWidth="124.0" text="Name" />
@@ -39,5 +39,6 @@
       </Text>
       <TextField fx:id="PId" layoutX="138.0" layoutY="68.0" promptText="Insert Id to Search" />
       <Button fx:id="PSrch" layoutX="509.0" layoutY="68.0" mnemonicParsing="false" onAction="#P_Search" prefHeight="25.0" prefWidth="118.0" text="Search" />
+      <Button layoutX="364.0" layoutY="65.0" mnemonicParsing="false" onAction="#reset_search" prefHeight="25.0" prefWidth="88.0" text="Reset Search" />
    </children>
 </AnchorPane>
