@@ -193,7 +193,7 @@ public class Add_DrController implements Initializable {
         T_Did.setCellValueFactory(new PropertyValueFactory("D_id"));
         T_Dname.setCellValueFactory(new PropertyValueFactory("D_Name"));
         T_Dphone.setCellValueFactory(new PropertyValueFactory("D_Phone"));
-        T_Ds.setCellValueFactory(new PropertyValueFactory("D_Type"));
+        T_Ds.setCellValueFactory(new PropertyValueFactory("D_Special"));
         T_Dvh.setCellValueFactory(new PropertyValueFactory("D_VH"));
         T_Dvf.setCellValueFactory(new PropertyValueFactory("D_vf"));
         T_Drn.setCellValueFactory(new PropertyValueFactory("D_Rnm"));
@@ -216,10 +216,10 @@ public class Add_DrController implements Initializable {
                 String d_visitingFee = rs.getString("d_visitingFee");
                 String d_visitHour = rs.getString("d_visitHour");
                 String d_discountType = rs.getString("d_discountType");
-                String d_special = rs.getString("D_Type");
+                String d_special = rs.getString("d_Type");
                 String d_Status = rs.getString("d_Status");
                 String d_pass = rs.getString("d_pass");
-
+                   // System.out.println(d_special);
                 Doctor_info.add(new Dr_info(s_id, d_name, d_phoneNumber, d_special, d_visitHour, d_visitingFee, d_room, d_Status, d_pass));
 
             }

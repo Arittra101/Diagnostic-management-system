@@ -48,13 +48,27 @@ public class Recep_HomeController implements Initializable {
 
     @FXML
     private void patientList(ActionEvent event) throws IOException {
-    
+        try{
+              Parent pane=FXMLLoader.load(getClass().getResource("Patient_List.fxml"));
+               viewPane.getChildren().setAll(pane);
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+           
     }
 
     @FXML
     private void logOut(ActionEvent event) throws IOException {
          Parent pane=FXMLLoader.load(getClass().getResource("LogIN.fxml"));
             Reception_Pane.getChildren().setAll(pane);
+    }
+
+    @FXML
+    private void Rec_docList(ActionEvent event) throws IOException {
+             Parent pane=FXMLLoader.load(getClass().getResource("Dr_List.fxml"));
+            viewPane.getChildren().setAll(pane);
     }
     
 }

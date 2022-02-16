@@ -65,7 +65,13 @@ public class Admini_optionController implements Initializable {
     @FXML
     private void res_list(ActionEvent event) {
         
-        try{
+      
+          
+    }
+
+    @FXML
+    private void doc_list(ActionEvent event) {
+          try{
             Parent pane=FXMLLoader.load(getClass().getResource("Dr_List.fxml"));
              adminiOptionPane.getChildren().setAll(pane);
         }
@@ -73,11 +79,6 @@ public class Admini_optionController implements Initializable {
         {
             System.out.println(e);
         }
-          
-    }
-
-    @FXML
-    private void doc_list(ActionEvent event) {
     }
     
 }

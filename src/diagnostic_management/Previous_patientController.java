@@ -12,9 +12,9 @@ import javafx.fxml.Initializable;
 /**
  * FXML Controller class
  *
- * @author Gopal Saha
+ * @author SC
  */
-public class Add_PatientController implements Initializable {
+public class Previous_patientController implements Initializable {
 
     /**
      * Initializes the controller class.
