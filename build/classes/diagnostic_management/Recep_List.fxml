@@ -13,7 +13,7 @@
    <children>
       <VBox alignment="CENTER" layoutX="-9.0" prefHeight="38.0" prefWidth="701.0" style="-fx-background-color: #342987;">
          <children>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient List" textAlignment="RIGHT">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Recep List" textAlignment="RIGHT">
                <font>
                   <Font size="22.0" />
                </font>

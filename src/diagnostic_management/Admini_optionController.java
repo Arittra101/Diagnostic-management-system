@@ -65,7 +65,7 @@ public class Admini_optionController implements Initializable {
     @FXML
     private void res_list(ActionEvent event) {
         try {
-            Parent pane = FXMLLoader.load(getClass().getResource("Recep_List.fxml"));
+            Parent pane = FXMLLoader.load(getClass().getResource("Recep_ViewList.fxml"));
             adminiOptionPane.getChildren().setAll(pane);
         } catch (Exception e) {
                 System.out.println(e);

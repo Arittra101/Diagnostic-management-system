@@ -28,37 +28,29 @@ import javafx.scene.control.cell.PropertyValueFactory;
  */
 public class Patient_ListController implements Initializable {
 
+    @FXML
     private TableColumn<Patient_info, String> T_pid;
+    @FXML
     private TableColumn<Patient_info, String> T_PName;
+    @FXML
     private TableColumn<Patient_info, String> T_Page;
+    @FXML
     private TableColumn<Patient_info, String> T_PBrp;
+    @FXML
     private TableColumn<Patient_info, String> T_Pg;
+    @FXML
     private TableColumn<Patient_info, String> T_phn;
+    @FXML
     private TableColumn<Patient_info, String> T_PQ;
+    @FXML
     private TextField PId;
+    @FXML
+    private Button PSrch;
     @FXML
     private TableView<Patient_info> Patient_List;
 
     Connection conn;
     ObservableList<Patient_info> Patient_info = FXCollections.observableArrayList();
-    @FXML
-    private TableColumn<?, ?> T_Rid;
-    @FXML
-    private TableColumn<?, ?> T_RName;
-    @FXML
-    private TableColumn<?, ?> T_Rg;
-    @FXML
-    private TableColumn<?, ?> T_Rhn;
-    @FXML
-    private TableColumn<?, ?> T_RJd;
-    @FXML
-    private TableColumn<?, ?> T_Rrs;
-    @FXML
-    private TableColumn<?, ?> T_Rps;
-    @FXML
-    private TextField RId;
-    @FXML
-    private Button RSrch;
 
     /**
      * Initializes the controller class.
@@ -71,6 +63,7 @@ public class Patient_ListController implements Initializable {
         refresh_fresh(query);
     }
 
+    @FXML
     private void P_Search(ActionEvent event) {
 
         String query = "select * from patient where  p_ID='" + PId.getText() + "'";
@@ -106,18 +99,11 @@ public class Patient_ListController implements Initializable {
         fetch_info(query);
     }
 
+    @FXML
     private void reset_search(ActionEvent event) {
 
        String query = "select * from patient";
         refresh_fresh(query);
-    }
-
-    @FXML
-    private void R_Search(ActionEvent event) {
-    }
-
-    @FXML
-    private void Rec_reset_search(ActionEvent event) {
     }
 
 }
