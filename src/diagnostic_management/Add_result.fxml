@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="testResult_Pane" prefHeight="551.0" prefWidth="703.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagnostic_management.Add_resultController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="50.0" prefWidth="703.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TEST RESULT">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <Text layoutX="136.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Test_ID" wrappingWidth="46.720703125" />
+      <TextField fx:id="testID" layoutX="258.0" layoutY="80.0" />
+      <Text layoutX="136.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Test Result" />
+      <TextField fx:id="testResult" layoutX="258.0" layoutY="133.0" />
+      <Text layoutX="136.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pathologist ID" />
+      <TextField fx:id="pathologistID" layoutX="258.0" layoutY="180.0" />
+      <Text layoutX="136.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delevary Date" />
+      <DatePicker fx:id="delivaryDate" layoutX="258.0" layoutY="232.0" />
+      <Button layoutX="365.0" layoutY="287.0" mnemonicParsing="false" onAction="#add_activity" text="Add" />
+      <Button layoutX="298.0" layoutY="287.0" mnemonicParsing="false" onAction="#back_activity" text="Back" />
+   </children>
+</AnchorPane>

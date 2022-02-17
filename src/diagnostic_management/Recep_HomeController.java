@@ -56,5 +56,17 @@ public class Recep_HomeController implements Initializable {
          Parent pane=FXMLLoader.load(getClass().getResource("LogIN.fxml"));
             Reception_Pane.getChildren().setAll(pane);
     }
+
+    @FXML
+    private void addtest_Activity(ActionEvent event) throws IOException {
+        Parent pane=FXMLLoader.load(getClass().getResource("Add_test.fxml"));
+        viewPane.getChildren().setAll(pane);
+    }
+
+    @FXML
+    private void testResult(ActionEvent event) throws IOException {
+         Parent pane=FXMLLoader.load(getClass().getResource("Result_List.fxml"));
+         viewPane.getChildren().setAll(pane);
+    }
     
 }
