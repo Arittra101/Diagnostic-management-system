@@ -42,18 +42,18 @@ public class Admini_optionController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void add_Doctor(ActionEvent event) throws IOException {
-         Parent pane=FXMLLoader.load(getClass().getResource("Add_Dr.fxml"));
-         adminiOptionPane.getChildren().setAll(pane);
+        Parent pane = FXMLLoader.load(getClass().getResource("Add_Dr.fxml"));
+        adminiOptionPane.getChildren().setAll(pane);
     }
 
     @FXML
     private void addReceptionist(ActionEvent event) throws IOException {
-           Parent pane=FXMLLoader.load(getClass().getResource("Add_Recep.fxml"));
-           adminiOptionPane.getChildren().setAll(pane);
+        Parent pane = FXMLLoader.load(getClass().getResource("Add_Recep.fxml"));
+        adminiOptionPane.getChildren().setAll(pane);
     }
 
     @FXML
@@ -64,21 +64,23 @@ public class Admini_optionController implements Initializable {
 
     @FXML
     private void res_list(ActionEvent event) {
-        
-      
-          
+        try {
+            Parent pane = FXMLLoader.load(getClass().getResource("Recep_List.fxml"));
+            adminiOptionPane.getChildren().setAll(pane);
+        } catch (Exception e) {
+                System.out.println(e);
+        }
+
     }
 
     @FXML
     private void doc_list(ActionEvent event) {
-          try{
-            Parent pane=FXMLLoader.load(getClass().getResource("Dr_List.fxml"));
-             adminiOptionPane.getChildren().setAll(pane);
-        }
-        catch(Exception e)
-        {
+        try {
+            Parent pane = FXMLLoader.load(getClass().getResource("Dr_List.fxml"));
+            adminiOptionPane.getChildren().setAll(pane);
+        } catch (Exception e) {
             System.out.println(e);
         }
     }
-    
+
 }

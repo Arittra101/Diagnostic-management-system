@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Code%202/Database%20Project/Diagnostic-management-system/src/diagnostic_management/Recep_HomeController.java</file>
+            <file>file:/D:/Code%202/Database%20Project/Diagnostic-management-system/src/diagnostic_management/Patient_info.java</file>
             <file>file:/D:/Code%202/Database%20Project/Diagnostic-management-system/src/diagnostic_management/ApointmentListController.java</file>
-            <file>file:/D:/Code%202/Database%20Project/Diagnostic-management-system/src/diagnostic_management/Table_Patient.java</file>
             <file>file:/D:/Code%202/Database%20Project/Diagnostic-management-system/src/diagnostic_management/Dr_apointList.java</file>
-            <file>file:/D:/Code%202/Database%20Project/Diagnostic-management-system/src/diagnostic_management/Patient_ListController.java</file>
             <file>file:/D:/Code%202/Database%20Project/Diagnostic-management-system/src/diagnostic_management/Add_RecepController.java</file>
+            <file>file:/D:/Code%202/Database%20Project/Diagnostic-management-system/src/diagnostic_management/Patient_ListController.java</file>
         </group>
     </open-files>
 </project-private>

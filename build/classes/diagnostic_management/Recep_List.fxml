@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="558.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagnostic_management.Patient_ListController">
+   <children>
+      <VBox alignment="CENTER" layoutX="-9.0" prefHeight="38.0" prefWidth="701.0" style="-fx-background-color: #342987;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient List" textAlignment="RIGHT">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <TableView fx:id="Patient_List" layoutX="2.0" layoutY="116.0" prefHeight="410.0" prefWidth="689.0">
+         <columns>
+            <TableColumn fx:id="T_Rid" text="R_ID" />
+            <TableColumn fx:id="T_RName" prefWidth="99.0" text="Name" />
+            <TableColumn fx:id="T_Rg" prefWidth="66.0" text="Gender" />
+            <TableColumn fx:id="T_Rhn" prefWidth="130.0" text="Phone Number" />
+            <TableColumn fx:id="T_RJd" prefWidth="111.0" text="Joining Date" />
+            <TableColumn fx:id="T_Rrs" prefWidth="96.0" text="Resign Date" />
+            <TableColumn fx:id="T_Rps" prefWidth="104.0" text="Password" />
+         </columns>
+      </TableView>
+      <Text layoutX="47.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="RId" layoutX="138.0" layoutY="68.0" promptText="Insert Id to Search" />
+      <Button fx:id="RSrch" layoutX="509.0" layoutY="68.0" mnemonicParsing="false" onAction="#R_Search" prefHeight="25.0" prefWidth="118.0" text="Search" />
+      <Button layoutX="364.0" layoutY="65.0" mnemonicParsing="false" onAction="#Rec_reset_search" prefHeight="25.0" prefWidth="88.0" text="Reset Search" />
+   </children>
+</AnchorPane>
