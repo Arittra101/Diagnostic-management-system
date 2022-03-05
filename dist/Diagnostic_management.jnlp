@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Diagnostic_management.jar" size="92442" download="eager" />
+    <jar href="Diagnostic_management.jar" size="94166" download="eager" />
     <jar href="lib\jfoenix-17.0.1.jar" size="2433574" download="eager" />
     <jar href="lib\mssql-jdbc-9.4.1.jre8.jar" size="1346759" download="eager" />
   </resources>

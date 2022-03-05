@@ -56,7 +56,7 @@ public class PatientAddController implements Initializable {
     ObservableList<String> Combogeder = FXCollections.observableArrayList("Male", "Female");
     ObservableList<String> ComboBlood = FXCollections.observableArrayList("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-");
     ObservableList<String> ComboQuota = FXCollections.observableArrayList("Poor", "Feedom Fighter");
-    ObservableList<String> ComboDrName = FXCollections.observableArrayList("Arittra Das", "Pronay Dabbnat");
+    ObservableList<String> ComboDrName = FXCollections.observableArrayList("Arittra Das", "Pronay");
     ObservableList<String> ComboDrtype = FXCollections.observableArrayList("Radiologists", "Neurologists", "Hematologists", "Gastroenterologists", "Endocrinologists", "Dermatologists", "Cardiologists");
 
     String pName;
@@ -67,7 +67,7 @@ public class PatientAddController implements Initializable {
     String pPhn;
     String pDrName;
     String pDrType;
-    String pVisitDate;
+    LocalDate pVisitDate;
     
     int patient_id=0;
     int doctor_id=0;
@@ -95,15 +95,15 @@ public class PatientAddController implements Initializable {
 
     @FXML
     private void addbutton_Action(ActionEvent event) {
-        pName = name.getText().toString();
-        pAge = age.getText().toString();
-        pGender = gender.getValue().toString();
-        pBlood = bloodGroup.getValue().toString();
-        pQuota = quota.getValue().toString();
-        pPhn = phone.getText().toString();
-        pDrName = drName.getValue().toString();
-        pDrType = type.getValue().toString();
-        pVisitDate = visitingdate.getValue().toString();
+        pName = name.getText();
+        pAge = age.getText();
+        pGender = gender.getValue();
+        pBlood = bloodGroup.getValue();
+        pQuota = quota.getValue();
+        pPhn = phone.getText();
+        pDrName = drName.getValue();
+        pDrType = type.getValue();
+        pVisitDate = visitingdate.getValue();
         System.out.println(pVisitDate);
 
         try {
@@ -148,7 +148,7 @@ public class PatientAddController implements Initializable {
             System.out.println("Doctor ID ="+doctor_id);
             System.out.println("Patient ID="+patient_id);
             
-            String query3="insert into Apointment (patient_id,doctor_id) values ('"+patient_id+"','"+doctor_id+"')";
+            String query3="insert into Apointment (p_ID,d_ID) values ('"+patient_id+"','"+doctor_id+"')";
             st.executeQuery(query3);
             
             doctor_id=0;

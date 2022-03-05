@@ -33,6 +33,8 @@ public class Dr_HomeController implements Initializable {
     
     public static int loginDr;
     
+  
+    
     Connection con;
 
     /**
@@ -63,7 +65,7 @@ public class Dr_HomeController implements Initializable {
     @FXML
     private void logout_button(ActionEvent event) throws IOException {
         Parent pane = FXMLLoader.load(getClass().getResource("LogIN.fxml"));
-       dr_home.getChildren().setAll(pane);
+        drPane.getChildren().setAll(pane);
     }
     
 }

@@ -37,18 +37,16 @@ public class Recep_HomeController implements Initializable {
     }    
 
     @FXML
-    private void addPatient(ActionEvent event) throws IOException {
-      
-            
-               Parent pane=FXMLLoader.load(getClass().getResource("patientAdd.fxml"));
-               viewPane.getChildren().setAll(pane);
-    
-   
-    }
-
-    @FXML
     private void patientList(ActionEvent event) throws IOException {
-    
+        try{
+              Parent pane=FXMLLoader.load(getClass().getResource("Patient_List.fxml"));
+               viewPane.getChildren().setAll(pane);
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+           
     }
 
     @FXML
@@ -58,15 +56,21 @@ public class Recep_HomeController implements Initializable {
     }
 
     @FXML
-    private void addtest_Activity(ActionEvent event) throws IOException {
-        Parent pane=FXMLLoader.load(getClass().getResource("Add_test.fxml"));
+    private void Rec_docList(ActionEvent event) throws IOException {
+             Parent pane=FXMLLoader.load(getClass().getResource("Dr_List.fxml"));
+            viewPane.getChildren().setAll(pane);
+    }
+
+    @FXML
+    private void add_patient(ActionEvent event) throws IOException {
+        Parent pane=FXMLLoader.load(getClass().getResource("patientAdd.fxml"));
         viewPane.getChildren().setAll(pane);
     }
 
     @FXML
-    private void testResult(ActionEvent event) throws IOException {
-         Parent pane=FXMLLoader.load(getClass().getResource("Result_List.fxml"));
-         viewPane.getChildren().setAll(pane);
+    private void testAdd(ActionEvent event) throws IOException {
+        Parent pane=FXMLLoader.load(getClass().getResource("Add_test.fxml"));
+        viewPane.getChildren().setAll(pane);
     }
     
 }
