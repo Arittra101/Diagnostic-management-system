@@ -81,6 +81,13 @@ public class FXMLDocumentController implements Initializable {
             ApointmentListController.loginDr=Integer.valueOf(U_id);
             
         }
+        else if(Integer.parseInt(U_id)>=600&& Integer.parseInt(U_id)<700)
+        {
+            query="Select p_Password from Pathologist where p_ID = "+U_id;
+            fxml_name="Pathologist_Home.fxml"; 
+            Pass_column="p_Password";
+            
+        }
        
         ResultSet rs= st.executeQuery(query);
         while(rs.next())

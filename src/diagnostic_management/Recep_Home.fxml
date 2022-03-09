@@ -22,7 +22,7 @@
                   <Button mnemonicParsing="false" onAction="#patientList" prefHeight="63.0" prefWidth="209.0" text="Patient List" />
                   <Button mnemonicParsing="false" onAction="#Rec_docList" prefHeight="58.0" prefWidth="208.0" text="Dr.List" />
                   <Button mnemonicParsing="false" onAction="#testAdd" prefHeight="53.0" prefWidth="210.0" text="Add Test" />
-                  <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="209.0" text="Test Report" />
+                  <Button mnemonicParsing="false" onAction="#testReport" prefHeight="54.0" prefWidth="209.0" text="Test Report" />
                </children>
             </VBox>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">

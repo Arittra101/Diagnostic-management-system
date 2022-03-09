@@ -36,7 +36,9 @@ public class Pathologist_HomeController implements Initializable {
     }    
 
     @FXML
-    private void test_list(ActionEvent event) {
+    private void test_list(ActionEvent event) throws IOException {
+        Parent pane=FXMLLoader.load(getClass().getResource("Test_List.fxml"));
+         mainPane.getChildren().setAll(pane);
     }
 
     @FXML

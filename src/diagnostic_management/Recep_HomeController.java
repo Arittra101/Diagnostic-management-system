@@ -72,5 +72,11 @@ public class Recep_HomeController implements Initializable {
         Parent pane=FXMLLoader.load(getClass().getResource("Add_test.fxml"));
         viewPane.getChildren().setAll(pane);
     }
+
+    @FXML
+    private void testReport(ActionEvent event) throws IOException {
+        Parent pane=FXMLLoader.load(getClass().getResource("Result_List.fxml"));
+        viewPane.getChildren().setAll(pane);
+    }
     
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="551.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagnostic_management.Test_ListController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="51.0" prefWidth="703.0" style="-fx-background-color: #063970;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Test List">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <TableView fx:id="testList_table" layoutX="23.0" layoutY="91.0" prefHeight="401.0" prefWidth="657.0">
+        <columns>
+          <TableColumn fx:id="tab_testid" prefWidth="139.0" text="Test_ID" />
+          <TableColumn fx:id="tab_testName" prefWidth="167.0" text="Test Name" />
+            <TableColumn fx:id="tab_rec" prefWidth="159.0" text="Recive Date" />
+            <TableColumn fx:id="tab_patient" prefWidth="191.0" text="Patient ID" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
