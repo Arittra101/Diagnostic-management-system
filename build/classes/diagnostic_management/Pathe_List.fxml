@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="PethPane" prefHeight="552.0" prefWidth="694.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagnostic_management.Pathe_ListController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="50.0" prefWidth="694.0" style="-fx-background-color: #0e184d;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Pathelogist List">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <TableView fx:id="Peth_table" layoutY="50.0" prefHeight="387.0" prefWidth="694.0">
+         <columns>
+            <TableColumn fx:id="Pa_id" prefWidth="87.0" text="ID" />
+            <TableColumn fx:id="Pa_Name" prefWidth="120.0" text="Name" />
+            <TableColumn fx:id="Pa_gen" prefWidth="106.0" text="Gender" />
+            <TableColumn fx:id="pa_Joi" prefWidth="114.0" text="Joining Date" />
+            <TableColumn fx:id="pa_pass" prefWidth="150.0" text="Password" />
+            <TableColumn fx:id="pa_phone" prefWidth="113.0" text="Phone Num" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

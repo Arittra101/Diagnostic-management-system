@@ -13,6 +13,7 @@ import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -56,7 +57,7 @@ public class ApointmentListController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         con = Database_Connection.Connection();
-        info_fetch();
+        refresh_fetch();
     }
 
     public void info_fetch() {
@@ -75,20 +76,22 @@ public class ApointmentListController implements Initializable {
         
         try {
             System.out.println(ApointmentListController.loginDr);
-            String query = "select patient.p_ID,patient.p_Name,patient.p_age,p_bloodGrp,patient.p_phoneNumber,patient.p_quota from patient RIGHT JOIN Apointment on patient.p_ID=Apointment.p_ID where d_ID='" + ApointmentListController.loginDr + "'";
+            String query = "select Apointment.apointment_id, patient.p_ID,patient.p_Name,patient.p_age,p_bloodGrp,patient.p_phoneNumber,patient.p_quota from patient RIGHT JOIN Apointment on patient.p_ID=Apointment.p_ID where d_ID='" + ApointmentListController.loginDr + "' and Apointment.Done='0'";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(query);
             while (rs.next())
             {
                 System.out.println("am i");
+                
                     String aId = rs.getString("p_ID");
                    String  aName = rs.getString("p_Name");
-                   String aAge = rs.getString("p_age");
+                   String apnId = rs.getString("apointment_id");  //here age is ap id
                    String aBg = rs.getString("p_bloodGrp");
                    String aPhn = rs.getString("p_phoneNumber");
                    String aQt = rs.getString("p_quota");
+                 
                    
-                   Dr_apointList dp = new Dr_apointList(aId,aName,aAge,aBg,aPhn,aQt);
+                   Dr_apointList dp = new Dr_apointList(aId,aName,apnId,aBg,aPhn,aQt);
                    Apoint_info.add(dp);
                    
             }
@@ -97,6 +100,33 @@ public class ApointmentListController implements Initializable {
                 System.out.println(e);
         }
 
+    }
+
+    @FXML
+    private void AP_Done(ActionEvent event) {
+        
+        ObservableList<Dr_apointList> Apoint_info = FXCollections.observableArrayList();
+        Apoint_info = apoint_table.getSelectionModel().getSelectedItems();
+        
+        String query = "Update Apointment set Done = '1' where apointment_id='"+Apoint_info.get(0).getAp_age()+"'";
+        try{
+                Statement st = con.createStatement();
+                st.execute(query);
+                refresh_fetch();
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+            
+    
+       
+    }
+    
+    public void refresh_fetch()
+    {
+        Apoint_info.clear();
+        info_fetch();
     }
 
 }

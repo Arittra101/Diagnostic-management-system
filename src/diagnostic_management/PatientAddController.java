@@ -56,7 +56,7 @@ public class PatientAddController implements Initializable {
     ObservableList<String> Combogeder = FXCollections.observableArrayList("Male", "Female");
     ObservableList<String> ComboBlood = FXCollections.observableArrayList("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-");
     ObservableList<String> ComboQuota = FXCollections.observableArrayList("Poor", "Feedom Fighter");
-    ObservableList<String> ComboDrName = FXCollections.observableArrayList("Arittra Das", "Pronay");
+    ObservableList<String> ComboDrName = FXCollections.observableArrayList("Arittra", "Pronay");
     ObservableList<String> ComboDrtype = FXCollections.observableArrayList("Radiologists", "Neurologists", "Hematologists", "Gastroenterologists", "Endocrinologists", "Dermatologists", "Cardiologists");
 
     String pName;
@@ -148,8 +148,8 @@ public class PatientAddController implements Initializable {
             System.out.println("Doctor ID ="+doctor_id);
             System.out.println("Patient ID="+patient_id);
             
-            String query3="insert into Apointment (p_ID,d_ID) values ('"+patient_id+"','"+doctor_id+"')";
-            st.executeQuery(query3);
+            String query3="insert into Apointment  values ('"+patient_id+"','"+doctor_id+"','0')";
+            st.execute(query3);
             
             doctor_id=0;
             patient_id=0;

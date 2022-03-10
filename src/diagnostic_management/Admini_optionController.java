@@ -58,8 +58,14 @@ public class Admini_optionController implements Initializable {
 
     @FXML
     private void add_pathologist(ActionEvent event) throws IOException {
-//        Parent pane=FXMLLoader.load(getClass().getResource("Add_Recptionistfxml"));
-//           adminiOptionPane.getChildren().setAll(pane);
+        Parent pane = FXMLLoader.load(getClass().getResource("Add_Pathelogy.fxml"));
+        adminiOptionPane.getChildren().setAll(pane);
+    }
+
+    @FXML
+    void path_List(ActionEvent event) throws IOException {
+        Parent pane = FXMLLoader.load(getClass().getResource("Pathe_List.fxml"));
+        adminiOptionPane.getChildren().setAll(pane);
     }
 
     @FXML
@@ -68,7 +74,7 @@ public class Admini_optionController implements Initializable {
             Parent pane = FXMLLoader.load(getClass().getResource("Recep_ViewList.fxml"));
             adminiOptionPane.getChildren().setAll(pane);
         } catch (Exception e) {
-                System.out.println(e);
+            System.out.println(e);
         }
 
     }

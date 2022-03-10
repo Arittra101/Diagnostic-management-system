@@ -30,6 +30,8 @@ import javafx.scene.layout.AnchorPane;
  */
 public class FXMLDocumentController implements Initializable {
     
+    
+    public static String Path_Id;
     private Label label;
     @FXML
     private PasswordField password;
@@ -86,6 +88,7 @@ public class FXMLDocumentController implements Initializable {
             query="Select p_Password from Pathologist where p_ID = "+U_id;
             fxml_name="Pathologist_Home.fxml"; 
             Pass_column="p_Password";
+            Path_Id = U_id;
             
         }
        

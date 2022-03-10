@@ -55,7 +55,9 @@ public class Dr_HomeController implements Initializable {
     }
 
     @FXML
-    private void previousPane(ActionEvent event) {
+    private void previousPane(ActionEvent event) throws IOException {
+        Parent pane = FXMLLoader.load(getClass().getResource("Previous_patient.fxml"));
+         dr_home.getChildren().setAll(pane);
     }
 
     @FXML

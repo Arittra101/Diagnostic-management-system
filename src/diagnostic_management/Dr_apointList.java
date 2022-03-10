@@ -10,15 +10,16 @@ package diagnostic_management;
  * @author Gopal Saha
  */
 public class Dr_apointList {
-    private String ap_id,ap_name,ap_age,ap_bloodgroup,ap_phn,ap_quota;
+    private String ap_id,ap_name,ap_age,ap_bloodgroup,ap_phn,ap_quota,Apn_id;
 
-    public Dr_apointList(String ap_id, String ap_name, String ap_age, String ap_bloodgroup, String ap_phn, String ap_quota) {
+     public Dr_apointList(String ap_id, String ap_name, String ap_age, String ap_bloodgroup, String ap_phn, String ap_quota) {
         this.ap_id = ap_id;
         this.ap_name = ap_name;
         this.ap_age = ap_age;
         this.ap_bloodgroup = ap_bloodgroup;
         this.ap_phn = ap_phn;
         this.ap_quota = ap_quota;
+        
     }
 
     public String getAp_id() {
@@ -40,6 +41,10 @@ public class Dr_apointList {
     public String getAp_age() {
         return ap_age;
     }
+
+  
+
+  
 
     public void setAp_age(String ap_age) {
         this.ap_age = ap_age;

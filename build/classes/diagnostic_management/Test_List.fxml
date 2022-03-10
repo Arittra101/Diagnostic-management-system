@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -26,5 +27,6 @@
             <TableColumn fx:id="tab_patient" prefWidth="191.0" text="Patient ID" />
         </columns>
       </TableView>
+      <Button fx:id="addresult" layoutX="579.0" layoutY="512.0" mnemonicParsing="false" onAction="#Add_result" text="Add Result" />
    </children>
 </AnchorPane>

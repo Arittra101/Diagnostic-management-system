@@ -48,6 +48,10 @@ public class Add_resultController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         con=Database_Connection.Connection();
+        testID.setText(Test_ListController.Test_Id);
+        pathologistID.setText(FXMLDocumentController.Path_Id);
+        
+        
     }    
 
     @FXML
